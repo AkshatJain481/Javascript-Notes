@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Js notes</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let a = 10; // Avoid var bcz var is globally scoped (even when var is declared in block) whereas let is locally scoped (only works in block that is declared)
+  console.log(a); // will print 10
+  a = "Akshat"; // updated to string
+  console.log(a); // will print Akshat
+// Therefore, variables in js are dynamic and data type can be changed on runtime
+const valueofpi = 3.14; // cannot be redeclared or updated
+// nnssbbu primitive data types
+// null, number, string, symbol, boolean, BigInt, undefined
+// object --> non primitive data type
+console.log(typeof a); // typeof will tell the data type of the variable
+
+// Objects in js
+const variablename = {
+  "A" : true,
+  "B" : false,
+  "C" : null,
+  "D" : 27,
+  "E" : "SS"
+}
+console.log(variablename["A"]);
+console.log(variablename["B"]);
+console.log(variablename["C"]);
+console.log(variablename["D"]);
+console.log(variablename["E"]);
+ 
+const item1 = {
+  A : "Obito Uchiha",
+  B : "Madara Uchiha",
+  C : "Itachi Uchiha"
+
+    }
+    item1["D"] = "Sasuke Uchiha"; // added "D" to const item1 which has value "Sasuke Uchiha".
+    console.log(item1["D"]);  // console.log(item1.D); also can be used
+    
+   // Operators 
+    
+    let ab = 4;
+    let bc = 2;
+    console.log("ab + bc = " + (ab + bc)); // adding
+    console.log("ab / bc = " + (ab / bc)); // division
+    console.log("ab - bc = " + (ab - bc)); // subtracting
+    console.log("ab * bc = " + (ab * bc)); // multiplication
+    console.log("ab ** bc = " + (ab ** bc)); // ab raised to the power bc (ab^bc)
+    console.log("ab % bc = " + (ab % bc)); // returns reminder
+
+// Comparision operators
+/* 
+== equal to
+!= not equal to
+=== equal value AND type
+!== NOT equal value OR type
+> greater than
+< less than
+>= greater than equal to
+<= less than equal to
+
+*/
+// alert(); tells a message
+// prompt(); takes input (always take string input data type)
+// Number.parseInt(); (converts any data type to integer number)
+//Number.parseFloat(); (converts any data type to float number)
+// (condition ? "if satisfied this will execute": "if not then this will")
+ 
+
+// Loops
+
+/*
+ 1. "for" loop --> nested
+ syntax
+
+ for(let i = 0; i < 10; i++){
+  "statements" (loop will execute 10 times 0-9);
+ }
+ 
+
+ 
+ 2. "while" loop --> nested
+ syntax
+
+ while(i<10){
+statements;
+i++;
+(loop will execute 0-9 total 10 times)
+ }
+ 
+ 
+ 3. "do-while" loop
+syntax
+
+do {
+  statements;
+loop modifier;
+}
+while(condition_to_continue);
+
+ */ 
+// 4. for-in loop
+ for (let letter in item1) // prints the names in the object item1 and there using for-in loop and it also works in ARRAYS
+
+{
+  console.log("Name stored in letter " + letter + " is " + item1[letter]);
+}
+// letter variable is only a block level so after for loop letter variable will be scoped off.
+ // 5. for-of loop
+ let variable = "Hello";
+ for (let letter in variable) // prints the names in the object item1 and there using for-in loop and it also works in ARRAYS
+{
+  console.log(letter);
+}
+// letter variable is only a block level so after for loop letter variable will be scoped off.
+
+// Functions
+
+function function_name(){
+  //code
+}
+
+function name_of_function(x,y,z,a,b,c) //  x y z a b c are all paramters to be passed in the function
+{
+  //code
+}
+// (Object.keys(object_name).length) --> keys will get the keys in object_name and length will get the number of KEYS in object_name.
+
+  </script>
+</html>
