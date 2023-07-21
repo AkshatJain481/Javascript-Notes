@@ -8,16 +8,27 @@
   
 </body>
 <script>
-  let a = 10; // Avoid var bcz var is globally scoped (even when var is declared in block) whereas let is locally scoped (only works in block that is declared)
-  console.log(a); // will print 10
-  a = "Akshat"; // updated to string
-  console.log(a); // will print Akshat
-// Therefore, variables in js are dynamic and data type can be changed on runtime
-const valueofpi = 3.14; // cannot be redeclared or updated
-// nnssbbu primitive data types
-// null, number, string, symbol, boolean, BigInt, undefined
-// object --> non primitive data type
-console.log(typeof a); // typeof will tell the data type of the variable
+  let a = 10;              // Avoid var bcz var is globally scoped (even when var is declared in block) whereas let is locally scoped (only works in block that is declared)
+  
+  
+  
+console.log(a);            // will print 10
+  
+  
+  
+a = "Akshat";             // updated to string
+  
+  
+console.log(a);           // will print Akshat
+                          // Therefore, variables in js are dynamic and data type can be changed on runtime
+
+
+const valueofpi = 3.14;   
+                          // cannot be redeclared or updated
+                          // nnssbbu primitive data types
+                          // null, number, string, symbol, boolean, BigInt, undefined
+                          // object --> non primitive data type
+console.log(typeof a);    // typeof will tell the data type of the variable
 
 // Objects in js
 const variablename = {
@@ -131,5 +142,35 @@ function name_of_function(x,y,z,a,b,c) //  x y z a b c are all paramters to be p
 }
 // (Object.keys(object_name).length) --> keys will get the keys in object_name and length will get the number of KEYS in object_name.
 
+// Strings
+
+let thisisasrtring = "Anything";
+console.log(thisisasrtring); // "Anyhting" is going to be printed in console
+
+console.log(thisisasrtring[2]); // "y" is going to be printed in console
+
+let name1 = "Ramesh";
+let name2 = "Suresh";
+
+let sentence = `${name1} is a friend of ${name2}.`; // backcomas are used (``) in template literals to us variables in it. (Called string interpulation)
+ // ${} will print any value in varaible stored whether it is number or string etc.
+
+
+ console.log(sentence);  // will print (Ramesh is a friend of Suresh.)
+
+
+console.log(name1 + " is a friend of " + name2 + "."); // will also print (Ramesh is a friend of Suresh.)
+
+
+// Escape sequences
+
+let name =  "Adam D'Angelo" 
+let namee = 'Adam D\'Angelo'   //  \' WILL be treated as ' one character
+console.log(name);
+console.log(namee); 
+// both will have same output
+// \n --> newline
+// \t --> tab
+// \r --> Carraige Button
   </script>
 </html>
