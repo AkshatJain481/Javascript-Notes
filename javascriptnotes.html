@@ -172,5 +172,36 @@ console.log(namee);
 // \n --> newline
 // \t --> tab
 // \r --> Carraige Button
+
+let abc = "Name";
+// anything.length will be 4
+// anything.toUpperCase() will be NAME and if there is value in bracket then it will act accordingly.
+//  anything.toLowercase() will be name nd if there is value in bracket then it will act accordingly.
+// anything.slice(1,3) will give "am" it will slice from 1 to 3 including 2st value and excluding 4th value (Note that string starts form 0)
+// anything.slice(2) will give "me" it will include from 2 and end upto last element.
+// anything.replace("H","G") will replace N and put G in that spot and will print "Game".
+let def = "My";
+console.log(def.concat(" ",abc, " is Akshat.")); // adding strings to a string (can be multiple).
+let spaces = "       hello world       ";
+console.log(spaces);
+console.log(spaces.trim()); // .trim() removes the starting AND ending spaces in a string ONLY. (NOT between the characters)
+
+let addition = "a" + "b" + "c" + def;
+// adding strings
+ console.log(addition);
+
+ let quick = "";
+ let quick1 = "Hello World";
+ for( let i = 0; i < quick1.length; i++){
+  quick += quick1[i];
+ }
+console.log(quick);
+
+let inc = "H";
+console.log(`This string quick1 ${quick1.includes(inc)? "includes": "does not include"} the character ${inc}.`); // .includes() returns true or false 
+// .startsWith() returns true or false based on if the string starts with the given string inside or not.
+// .endsWith() vice-versa of startsWith()
+
+
   </script>
 </html>
