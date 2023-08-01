@@ -203,5 +203,102 @@ console.log(`This string quick1 ${quick1.includes(inc)? "includes": "does not in
 // .endsWith() vice-versa of startsWith()
 
 
+// Arrays
+let array1 = [1,2,3,4,5,6,7,null,undefined,true,false];
+console.log(array1[0]); // 1
+console.log(array1[2]); // 3
+console.log(array1[3]); // 4
+console.log(array1[7]);
+console.log(array1[8]);
+console.log(array1[9]);
+console.log(array1[10]);
+console.log(array1[11]); // undefined
+
+array1[11] = "Hello";
+console.log(array1[11]); // Hello
+console.log(array1.length);
+// You can change the value of the existing array too.
+// Array is a type of object when you print "type of"
+
+
+// Array Methods
+ 
+let arraytostring = array1.toString();  // converts array to string
+console.log(arraytostring);
+let joining = array1.join(" and ");  // joins array elements with the input in the brackets given ("...."); AND also converts the array to a string.
+
+console.log(joining, typeof joining);
+
+let r = array1.pop(); // removes last element in the array
+
+console.log(array1,r);
+array1.push("element added"); // adds and element in the last of the array
+console.log(array1);
+
+array1.shift(); // removes the first element of the array
+array1.unshift("element that has been added to the beginning"); // Adds an element in the beginning of the array
+
+delete array1[2]; // 3rd element of the array will be deleted BUT THE LENGTH OF THE ARRAY REMAINS SAME
+console.log(array1);
+
+let array2 = [8,9,10,11,12,13,14];
+let array3 = [15,16,17,18,19,20,21];
+let array4 = array1.concat(array2,array3); // will join all arrays in concat method AND you can also repeat the same array by adding itself to it. (does not modify original array)
+console.log(array4);
+let array5 = [2,3,1];
+function forsorting(x,y){ 
+  return (y-x);  // this is for descending order and (x-y) is for ascending order
+}
+/* 
+case-1
+x= 2, y=3
+y-x=1
+case-2
+x=2,y=1
+y-x=-1
+
+(there will be total 9 cases for array5)
+
+*/
+array5.sort(forsorting); // sorts the array5 and changes the array5 too. sort() method sorts the elements in alphabetical order
+console.log(array5);
+ // .reverse(); reverses the original array and the changes will reflect in the original array.
+
+ array2.splice(3,2,"1st","2nd","3rd","4th"); //splice add elements to an array. Syntax:--->  .splice(array_position_to_start_from_given_number, number_of_elements_deleted, added_elem1, added_elem2, added_elem3); modifies original array
+
+console.log(array2);
+
+let arr = array3.slice(2,6); // .slice(start, end); slices the array, does not modify original array. elements will show up from "start" to one before the "end".
+console.log(arr);
+
+// array3 = [15,16,17,18,19,20,21];
+ array3.forEach((x) => {console.log(x+x);}); 
+ // map() can make array unlike foreach you can return elements
+function forfilter(x){
+  return x< 19;
+}
+
+ let arrr = array3.filter(forfilter);
+ console.log(arrr);
+
+ //reduce(); returns a value according to the function given in it.
+
+ // CONSOLE METHODS
+
+ //  console.log(); printing anything in brackets
+ //  console.error(); prints an error with the given input in the brackets
+ // console.assert(); if true than it will throw no error otherwise it will give an error if false condition in brackets
+ // console.clear(); clears the console
+// console.table(); prints keys and values of the keys of the given object in brackets in tabular form.
+// console.warn(); gives warning
+// console.info(); gives info
+// console.time(); starts a timer
+// console.timeEnd(); ends the timer
+    
+
+
+//confirm(); asks something and takes true or false in return and can be used according to true or false. 
+
+ 
   </script>
 </html>
